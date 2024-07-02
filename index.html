@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Currency Converter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      #submit {
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+      }
+    </style>
+  </head>
+
+  <body class="bg-slate-200">
+    <h1 class="text-center m-4 text-3xl underline">Currency Converter</h1>
+    <br />
+
+    <!-- gif -->
+    <img src="money.webp" alt="money" id="gif" class="absolute rounded-md left-0 right-0 m-auto top-40 hidden">
+
+    <!-- from -->
+    <form action="" class="flex flex-col items-center">
+
+      <input type="number" id="amount" value="1" placeholder="Enter Amount" class="mb-5 border border-gray-300 rounded-md py-2 px-4 block w-1/2 outline outline-2 outline-offset-2" />
+
+      <!-- country 1 -->
+      <div class="mb-5 flex items-center">
+        <img id="flag1" src="https://flagsapi.com/NO/flat/64.png" alt="flag" class="mr-3 w-12 aspect-square" />
+        <pre class="text-lg">From :</pre>
+        <select id="fromList" class="ml-2 border border-gray-300 rounded-md py-2 px-4"> </select>
+      </div>
+
+      <!-- country 2 -->
+      <div class="flex items-center">
+        <img id="flag2" src="https://flagsapi.com/NP/flat/64.png" alt="flag" class="mr-3 w-12 aspect-square" />
+        <pre class="text-lg">To   :</pre>
+        <select id="toList" class="ml-2 border border-gray-300 rounded-md py-2 px-4"> </select>
+      </div>
+
+      <!-- submit -->
+      <div class="text-center">
+       <button class="m-3 bg-emerald-400 w-full p-1 text-xl rounded-md mt-8 hover:bg-emerald-300" id="submit">
+        <span class="semi">Get exchange Rates</span> <i class="fa-solid fa-arrow-pointer ms-2 text-gray-100"></i>
+       </button>
+      </div>
+
+      <!-- output -->
+      <div class="m-5 text-center">
+        <div >Converted Amount</div>
+        <div id="output" class="text-xl m-3 bg-rose-500 h-12 w-full p-2 rounded-sm text-white">
+        </div>
+      </div>
+        
+    </form>
+
+    <script src="countryList.js"></script>
+    <script src="updateFlag.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
